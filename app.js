@@ -5,21 +5,28 @@ var calcButton = document.querySelector('#calculate-btn');
 var outputScreen = document.querySelector('#output-screen');
 
 function calculateProfitAndLost(initial, quantity, current) {
-    if(current > initial) {
-        //Profit
-        var profit = (current - initial) * quantity;
-        var profitPercent = (profit/initial) * 100;
-        displayOutput(`Congratualations!! You are in profit of $${profit} and the profit percent is ${profitPercent}%`);
-    }
-    else if(current < initial) {
-        //Loss
-        var loss = (current - initial) * quantity;
-        var lossPercent = (loss/initial) * 100;
-        displayOutput(`Unfortunately you are in loss of $${loss} and the loss percent is ${lossPercent}%`);
+    if( initialPrice.value === "" ||
+        stockQuantity.value === "" ||
+        currentPrice.value === "") {
+        displayOutput(`**Please fill in all the inputs**`);
     }
     else {
-        //balanced
-        displayOutput("No Pain No Gain");
+        if(current > initial) {
+            //Profit
+            var profit = (current - initial) * quantity;
+            var profitPercent = (profit/initial) * (100/quantity);
+            displayOutput(`Congratualations!! You are in profit of $${profit.toFixed(2)} and the profit percent is ${profitPercent.toFixed(2)}%`);
+        }
+        else if(current < initial) {
+            //Loss
+            var loss = (initial - current) * quantity;
+            var lossPercent = (loss/initial) * (100/quantity);
+            displayOutput(`Unfortunately you are in loss of $${loss.toFixed(2)} and the loss percent is ${lossPercent.toFixed(2)}%`);
+        }
+        else {
+            //balanced
+            displayOutput("No Pain No Gain");
+        }
     }
 }
 
