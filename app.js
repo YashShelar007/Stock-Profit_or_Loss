@@ -23,3 +23,12 @@ function calculateProfitAndLost(initial, quantity, current) {
     }
 }
 
+calcButton.addEventListener('click', calcHandler);
+
+function calcHandler() {
+    var ip = Number(initialPrice.value);
+    var qty = Number(stockQuantity.value);
+    var cp = Number(currentPrice.value);
+
+    calculateProfitAndLost(ip,qty,cp);
+}
