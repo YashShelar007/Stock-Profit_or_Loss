@@ -1,8 +1,84 @@
+:root {
+    --primary-color: #f3f3f3;
+    --black-900: #1e2025;
+    --blue-600: #2563eb;
+    --black-800: #22252a;
+}
+
 body {
+    display: block;
     text-align: center;
+    color: var(--primary-color);
+}
+
+main {
+    display: flex;
+    height: 100vh;
+}
+
+h2 {
+    margin-bottom: 2rem;
+    color: var(--primary-color);
+    display: block;
+    font-size: 1.5em;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+
+.heading {
+    font-size: 1.5rem;
+}
+
+.leftside {
+    background-color: var(--black-800);
+    width: 50%;
+    text-align: center;
+    padding-top: 25vh;
 }
 
 label {
     display: block;
     padding-bottom: 1rem;
+    color: var(--primary-color);
 }
+
+input {
+    border: none;
+    background-color: var(--black-900);
+    padding: 1.5rem 1rem;
+    font-size: 0.8rem;
+    margin-bottom: 1rem;
+    width: 25rem;
+    color: var(--primary-color);
+}
+
+button {
+    border: none;
+    background-color: var(--blue-600);
+    color: var(--primary-color);
+    font-weight: 700;
+    padding: 1.2rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    width: 25rem;
+    margin-top: 1rem;
+}
+
+.rightside {
+    background-color: var(--black-900);
+    width: 50%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+#output-screen {
+    width: 70%;
+    margin: auto;
+    font-size: 1.5rem;
+    color: var(--primary-color);
+}
+

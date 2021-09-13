@@ -8,21 +8,24 @@
     <title>Stock Records</title>
 </head>
 <body>
-    <h1>Stock Records</h1>
     <main>
-        <label for="initial-price">Initial Price
-        <input type="number" id="initial-price" placeholder="Please enter initial price here"/>
-        </label>
-        <label for="stock-quantity">Quantity
-        <input type="number" id="stock-quantity" placeholder="Please enter quantity of the stocks"/>
-        </label>
-        <label for="current-price">Current Price
-        <input type="number" id="current-price" placeholder="Please enter current price here"/>
-        </label>
+        <div class="leftside">
 
-        <button id = "calculate-btn">Tell Me!!</button>
-
-        <div id="output-screen"></div>
+            <div class="heading">Know about your Stonks!</div>
+            <label for="initial-price">Initial Price
+                <input type="number" id="initial-price" placeholder="Please enter initial price here"/>
+                </label>
+                <label for="stock-quantity">Quantity
+                <input type="number" id="stock-quantity" placeholder="Please enter quantity of the stocks"/>
+                </label>
+                <label for="current-price">Current Price
+                <input type="number" id="current-price" placeholder="Please enter current price here"/>
+                </label>
+                <button id = "calculate-btn">Tell Me!!</button>
+        </div>
+        <div class="rightside">
+            <div id="output-screen"></div>
+        </div>
     </main>
     <script src="app.js"></script>
 </body>
